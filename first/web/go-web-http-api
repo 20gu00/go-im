@@ -1,0 +1,13 @@
+go的web编程,http编程核心api
+
+请求格式和处理函数绑定
+func HandleFunc(
+  pattern string,//请求的格式,http://localhost/user/login
+  handler func(ResponseWriter,*Request)//处理函数
+)
+
+启动服务器
+func ListerAndServe(
+  addr string,
+  handler Handler//处理函数
+)
