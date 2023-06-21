@@ -50,5 +50,9 @@ udp和http2协议
 -----------------------------im结构
 前端:ios android web app sdk api websocket
 接入层:tcp https http2 websocket
-逻辑层:鉴权 登录 用户关系 群聊 单聊 消息上发下发
-存储层:mysql redis mogondb hbase hive 文件服务器
+逻辑层:鉴权 登录 用户关系 群聊 单聊 消息上报下发
+存储层:mysql(消息存储,历史记录) redis mogondb hbase hive(大数据) 文件服务器(高并发设计)
+
+
+
+可以是app微信或者网页通过http或者websocket连接到我们的应用服务器im系统
