@@ -12,6 +12,8 @@ func main() {
 			io.WriteString(writer, "你好")
 		})
 
+	//curl http://localhost/user/login
+
 	//启动服务器 http
 	http.ListenAndServe(":8080", nil)
 }
