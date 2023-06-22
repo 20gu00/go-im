@@ -21,6 +21,8 @@ func main() {
 			//omitempty设置jso标签,可以忽略空,也就是null的数据不会出错
 			//writer.Write([]byte(str))
 			io.WriteString(writer, "你好")
+
+			//可以直接在这个handler函数中调用service层服务,也就是业务逻辑代码,通常我喜欢定义为controller
 		})
 
 	//默认80端口
