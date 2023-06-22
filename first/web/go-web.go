@@ -9,6 +9,15 @@ func main() {
 	//将请求路径和逻辑函数绑定
 	http.HandleFunc("/user/login",
 		func(writer http.ResponseWriter, req *http.Request) {
+			//获取参数,这里是表单form
+			req.ParseForm()
+			//返回数据,默认是text/html,想返回json就要设置header  如果是Gin框架可以直接c.JSON
+			writer.Header().Set("Content-type", "application/json")
+			//写回header头响应
+			writer.WriteHeader(http.StatusOK)
+			//返回的json字符串
+			//str:=`{"code":"1","msg":"2"}`
+			//writer.Write([]byte(str))
 			io.WriteString(writer, "你好")
 		})
 
