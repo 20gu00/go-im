@@ -16,7 +16,9 @@ func main() {
 			//写回header头响应
 			writer.WriteHeader(http.StatusOK)
 			//返回的json字符串
+			//json.Marshal(struct)将结构体转换成json字符串
 			//str:=`{"code":"1","msg":"2"}`
+			//omitempty设置jso标签,可以忽略空,也就是null的数据不会出错
 			//writer.Write([]byte(str))
 			io.WriteString(writer, "你好")
 		})
